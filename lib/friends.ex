@@ -10,6 +10,7 @@ defmodule Friends do
     children = [
       # Starts a worker by calling: Friends.Worker.start_link(arg1, arg2, arg3)
       # worker(Friends.Worker, [arg1, arg2, arg3]),
+      supervisor(Friends.Repo, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
